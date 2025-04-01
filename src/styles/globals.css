@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+/* Mobile-first styles */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tablet and above */
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1280px;
+  }
+}
+
+/* Touch-friendly button sizes for mobile */
+button, 
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Larger form elements on mobile */
+input, 
+textarea, 
+select {
+  font-size: 16px; /* Prevents iOS zoom on focus */
+  padding: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  input, 
+  textarea, 
+  select {
+    padding: 0.5rem;
+  }
+}

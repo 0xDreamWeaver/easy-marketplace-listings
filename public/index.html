@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Listing Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .app-container {
+      max-width: 100%;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      padding: 1rem;
+      background-color: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    .content {
+      flex: 1;
+      padding: 1rem;
+    }
+    .footer {
+      padding: 1rem;
+      background-color: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    .demo-section {
+      margin-bottom: 2rem;
+    }
+    .demo-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 768px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .feature-card {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1rem;
+      color: #4f46e5;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 0.375rem;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background-color: #4f46e5;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #4338ca;
+    }
+    .btn-secondary {
+      background-color: #f3f4f6;
+      color: #1f2937;
+    }
+    .btn-secondary:hover {
+      background-color: #e5e7eb;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="app-container">
+    <header class="header">
+      <h1 class="text-2xl font-bold text-gray-900">Marketplace Listing Generator</h1>
+      <p class="text-gray-600 mt-2">Create professional listings for multiple marketplaces with AI assistance</p>
+    </header>
+
+    <main class="content">
+      <section class="demo-section">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-medium text-gray-800 mb-2">1. Take Photos</h3>
+            <img src="images/item1.jpg" alt="Take photos of your item" class="demo-image mb-3">
+            <p class="text-gray-600">Snap photos of your items using your camera or upload existing images.</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-medium text-gray-800 mb-2">2. AI-Generated Content</h3>
+            <img src="images/item1-processed.jpg" alt="AI generates content" class="demo-image mb-3">
+            <p class="text-gray-600">Our AI automatically generates titles, descriptions, and suggests pricing based on market data.</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-medium text-gray-800 mb-2">3. Publish Everywhere</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded">eBay</span>
+              <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Etsy</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded">Craigslist</span>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded">FB Marketplace</span>
+            </div>
+            <p class="text-gray-600">Publish your listings to multiple marketplaces with a single click.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">Bulk Photo Processing</h3>
+            <p class="mt-2 text-gray-600">Take multiple photos and process them all at once. Our app handles the heavy lifting.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">AI-Powered Content</h3>
+            <p class="mt-2 text-gray-600">Generate professional titles, descriptions, and keywords using advanced AI technology.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">Smart Pricing</h3>
+            <p class="mt-2 text-gray-600">Get competitive pricing suggestions based on real-time market data analysis.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">Multi-Platform Publishing</h3>
+            <p class="mt-2 text-gray-600">Post to eBay, Etsy, Craigslist, and Facebook Marketplace all from one interface.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">Background Processing</h3>
+            <p class="mt-2 text-gray-600">Continue taking photos while our app processes previous images in the background.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            <h3 class="text-lg font-medium text-gray-900">Mobile-First Design</h3>
+            <p class="mt-2 text-gray-600">Optimized for mobile devices so you can create listings on the go.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12 text-center">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Ready to streamline your selling process?</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6">Our marketplace listing generator helps you create professional listings in minutes instead of hours.</p>
+        <div class="space-x-4">
+          <a href="#" class="btn btn-primary">Try Demo</a>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Marketplace Listing Generator. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

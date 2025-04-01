@@ -1,0 +1,39 @@
+# This is your Cloudflare Workers configuration file
+name = "marketplace-lister"
+main = "src/worker.ts"
+compatibility_date = "2023-10-30"
+
+# Configure static assets handling
+[site]
+bucket = "./.next/static"
+entry-point = "."
+
+# Bind a D1 database. Learn more: https://developers.cloudflare.com/workers/platform/bindings/#d1-database-bindings
+[[d1_databases]]
+binding = "DB"
+database_name = "marketplace-lister-db"
+database_id = "marketplace-lister-db"
+
+# Bind an R2 bucket for image storage
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "marketplace-lister-images"
+
+# Bind KV namespace for static assets
+[[kv_namespaces]]
+binding = "__STATIC_CONTENT"
+id = "static-content"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Build configuration
+[build]
+command = "npm run build"
+watch_dir = "src"
+
+# Dev configuration
+[dev]
+port = 8787
+local_protocol = "http"
